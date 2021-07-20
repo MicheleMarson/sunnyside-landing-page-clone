@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.section3 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.review {
+  text-align: center;
+  line-height: 30px;
+}
+
+.review__box {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.review__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 40px;
+  max-width: 400px;
+}
+
+.review__img {
+  padding: 50px 0;
+}
+
+.review__img img {
+  height: 100px;
+  border-radius: 50%;
+}
+
+.review__title {
+  padding-top: 50px;
+  text-align: center;
+  font-family: "Fraunces", sans-serif;
+  color: #a7abae;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.review__desc {
+  font-size: 18px;
+  padding-bottom: 50px;
+  color: #5a636c;
+}
+
+.review__author {
+  color: #23303e;
+}
+
+.review__job {
+  color: #a7abae;
+}
+
+@media (max-width: 1180px) {
+  .section3 {
+    height: auto;
+  }
+  .review__box {
+    display: block;
+    padding: 0;
+  }
+  .review__content {
+    width: 100%;
+    margin: 0;
+    padding: 10px 20px;
+  }
+  .review__content:nth-child(2) {
+    background: #f0f0f0;
+  }
+  .review__img {
+    padding-top: 50px;
+  }
+}
+/*# sourceMappingURL=section3.css.map */

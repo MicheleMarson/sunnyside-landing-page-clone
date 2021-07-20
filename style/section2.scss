@@ -1,0 +1,182 @@
+@import "./var.scss";
+
+
+.content{
+  color: $dark-color;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  a{
+    color: $dark-color;
+    display: inline-block;
+  }
+
+  p, a{
+    padding: 20px 10px;
+  }
+
+  &__box{
+    background: #fff;
+    height: 100%;
+    display: flex;
+    position: relative;
+
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &--mobile{
+      display: none;
+    }
+
+    &--deskop{
+      display: block;
+    }
+  }
+
+  &__textBox{
+    padding: 10px;
+    width: 600px;
+    margin: auto;
+    z-index: 1;
+  }
+
+  &__title{
+    font-family: 'Fraunces', serif;
+    font-size: 2.5rem;
+  }
+
+  &__desc{
+    font-size: 18px;
+    line-height: $def-line-height;
+    color: $light-gray-color;
+  }
+
+  &__btn{
+    position: relative;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Fraunces', serif;
+
+    &::after{
+      content: "";
+      position: absolute;
+      height: 10px;
+      bottom: 20px;
+      left: 0;
+      right: 0;
+      z-index: -1;
+      border-radius: 20px;
+      transition: .150s ease-in;
+    }
+
+    &--red:hover::after{
+      background: hsl(7, 99%, 70%);
+    }
+    &--yellow:hover::after{
+      background: hsl(51, 100%, 49%);
+    }
+  }
+
+  &__bottomBox{
+    height: 200px;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    width: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__bottomText{
+    font-size: 20px;
+    font-family:'Fraunces', serif;
+  }
+
+  &__box--cherry{
+    .content__bottomBox{
+      color: hsl(167, 40%, 24);
+    }
+  }
+
+  &__box--orange{
+    .content__bottomBox{
+      color: hsl(198, 62%, 26%);
+    }
+  }
+}
+
+
+// ------------------------ media ------------------------------
+
+@media (max-width:1180px) {
+  .content{
+    &__textBox, &__bottomBox{
+      width: 100%;
+    }
+
+    &__title{
+      font-size: 2rem;
+    }
+    
+    &__bottomBox{
+      bottom: 0%;
+    }
+  }
+}
+
+@media (max-width:375px) {
+  .content{
+    display: flex;
+    flex-direction: column;
+
+    &__textBox{
+      position: relative;
+      display: block;
+      z-index: 1;
+    }
+
+    
+
+    &__box{
+      display: block;
+      width: 100%;
+      height: fit-content;
+      height: 400px;
+      text-align: center;
+
+      &--mobile{
+        display: block;
+      }
+
+      &--deskop{
+        display: none;
+      }
+    }
+
+    &__box--egg{
+      order: -2;
+    }
+
+    &__box--yellow{
+      order: -1;
+    }
+
+    &__box--cherry, &__box--orange{
+      height: 100vh;
+    }
+
+    &__btn--red::after{
+      background:hsl(7, 99%, 70%);
+      z-index: -1;
+    }
+    &__btn--yellow::after{
+      background:hsl(51, 100%, 49%);
+    }
+  }
+}

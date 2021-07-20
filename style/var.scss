@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&display=swap');
+$def-margin:10px;
+$light-color:#fff;
+$def-padding:30px 15px;
+$dark-color:hsl(212, 27%, 19%);
+$dark-gray-color:hsl(213, 9%, 39%);
+$light-gray-color:hsl(233, 11%, 52%);
+$def-line-height:30px;
+$dark-clay-color:hsl(168, 34%, 41%);
+$grayish: hsl(210, 4%, 67%);
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
