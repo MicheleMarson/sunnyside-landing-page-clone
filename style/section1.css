@@ -85,7 +85,7 @@ a {
 }
 
 .title {
-  padding: 120px 10px;
+  padding: 160px 10px;
   text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
@@ -159,6 +159,9 @@ a {
     display: block;
     font-size: 30px;
     cursor: pointer;
+  }
+  .title {
+    padding: 10vh 10px;
   }
 }
 /*# sourceMappingURL=section1.css.map */
