@@ -42,7 +42,7 @@ a {
 .content__box img {
   height: 100%;
   width: 100%;
-  object-fit:none;
+  object-fit:unset;
 }
 
 .content__box--mobile {
